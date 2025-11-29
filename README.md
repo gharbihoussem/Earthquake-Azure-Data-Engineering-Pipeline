@@ -62,6 +62,7 @@ We implement a **medallion architecture** to structure and organize data effecti
 
 ## **Technologies Used**
 - Azure Databricks
+- Azure Storage Account
 - Azure Data Factory
 - Azure Synapse Analytics
 
