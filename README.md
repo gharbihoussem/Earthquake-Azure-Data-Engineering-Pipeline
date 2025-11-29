@@ -51,13 +51,14 @@ We implement a **medallion architecture** to structure and organize data effecti
      GROUP BY
          country_code;
 
+---
+
 ### Key Benefits
 
 - **Automation**: Eliminates manual data fetching and processing, reducing operational overhead.
 - **Scalability**: Handles large volumes of data seamlessly using Azure services.
 - **Actionable Insights**: Provides stakeholders with ready-to-use data for informed decision-making.
 
----
 
 ## **Technologies Used**
 - Azure Databricks
