@@ -1,4 +1,4 @@
-# Earthquake Azure Data Pipeline
+# :gear: Earthquake Azure Data Pipeline
 
 ## Overview and Architecture
 
