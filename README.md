@@ -1,4 +1,4 @@
-# Earthquake Azure Data Engineering Pipeline
+# Earthquake Azure Data Pipeline
 
 ## Overview and Architecture
 
