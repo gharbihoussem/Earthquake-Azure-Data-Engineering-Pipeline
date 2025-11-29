@@ -30,6 +30,27 @@ We implement a **medallion architecture** to structure and organize data effecti
 - **Start Date**: Defines the range of data. This is dynamically set via Azure Data Factory for daily ingestion.
 - **API URL**: `https://earthquake.usgs.gov/fdsnws/event/1/`
 
+### Integrating Azure Synapse Analytics
+1. **Create a Synapse Workspace**:
+   - Link it to the existing Storage Account.
+   - Configure a file system and assign necessary permissions.
+2. **Query Data Using Serverless SQL**:
+   - Use `OPENROWSET` to query Parquet files stored in `bronze`, `silver`, and `gold` containers.
+   - Example query:
+     ```sql
+     SELECT
+         country_code,
+         COUNT(CASE WHEN LOWER(sig_class) = 'low' THEN 1 END) AS low_count,
+         COUNT(CASE WHEN LOWER(sig_class) IN ('medium', 'moderate') THEN 1 END) AS medium_count,
+         COUNT(CASE WHEN LOWER(sig_class) = 'high' THEN 1 END) AS high_count
+     FROM
+         OPENROWSET(
+             BULK 'https://<storage_account>.dfs.core.windows.net/gold/earthquake_events_gold/**',
+             FORMAT = 'PARQUET'
+         ) AS [result]
+     GROUP BY
+         country_code;
+
 ### Key Benefits
 
 - **Automation**: Eliminates manual data fetching and processing, reducing operational overhead.
