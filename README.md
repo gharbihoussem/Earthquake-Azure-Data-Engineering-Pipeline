@@ -49,3 +49,12 @@ We implement a **medallion architecture** to structure and organize data effecti
 - **Data Engineering Focus**: Maintain an emphasis on structured pipelines and optimized workflows.
 
 This guide provides a comprehensive approach to setting up a professional-grade Azure Databricks and Synapse workflow for data engineering.
+
+---
+
+## 🏳️ License
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+
+## 🔖 About Me 
+Hi there! I'm **Houssem Gharbi**, i'm a Junior Data Engineer passionate about building scalable data solutions and deriving actionable insights. I enjoy transforming raw data into meaningful stories that drive decision-making. This project reflects my skills and interest in creating efficient data pipelines and analytics platforms.
+
