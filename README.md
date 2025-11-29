@@ -1,4 +1,4 @@
-# Earthquake Azure Data Engineering Pipeline: A Comprehensive Guide
+# Earthquake Azure Data Engineering Pipeline
 
 ## Overview and Architecture
 
